@@ -2,6 +2,9 @@ package main
 
 // TODO: define the 'PreparationTime()' function
 func PreparationTime(layers []string, time int) int {
+	if time <= 0 {
+		return len(layers) * 2
+	}
 	return len(layers) * time
 }
 
