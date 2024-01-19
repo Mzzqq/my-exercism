@@ -8,6 +8,7 @@ func PreparationTime(layers []string, time int) int {
 	return len(layers) * time
 }
 
+// TODO: define the 'Quantities()' function
 func Quantities(ingredient []string) (noodles int, sauce float64) {
 	noodles = 0
 	sauce = 0
