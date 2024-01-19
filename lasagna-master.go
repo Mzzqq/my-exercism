@@ -21,3 +21,13 @@ func Quantities(ingredient []string) (noodles int, sauce float64) {
 	}
 	return noodles * 50, sauce * 0.2
 }
+
+// TODO: define the 'AddSecretIngredient()' function
+func AddSecretIngredient(friendList, myList []string) []string {
+	for i, _ := range myList {
+		if myList[i] == "?" {
+			myList[i] = friendList[len(friendList)-1]
+		}
+	}
+	return myList
+}
