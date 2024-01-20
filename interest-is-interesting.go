@@ -24,3 +24,12 @@ func Interest(balance float64) float64 {
 func AnnualBalanceUpdate(balance float64) float64 {
 	return balance + Interest(balance)
 }
+
+// YearsBeforeDesiredBalance calculates the minimum number of years required to reach the desired balance.
+func YearsBeforeDesiredBalance(balance, targetBalance float64) int {
+	var i int
+	for i = 0; balance < targetBalance; i++ {
+		balance += Interest(balance)
+	}
+	return i
+}
