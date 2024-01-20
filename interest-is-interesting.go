@@ -14,3 +14,8 @@ func InterestRate(balance float64) float32 {
 	}
 	return float32(balance)
 }
+
+// Interest calculates the interest for the provided balance.
+func Interest(balance float64) float64 {
+	return balance * float64(InterestRate(balance)) / 100
+}
