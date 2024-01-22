@@ -12,3 +12,9 @@ func Units() map[string]int {
 	}
 	return grossStore
 }
+
+// NewBill creates a new bill.
+func NewBill() map[string]int {
+	bill := map[string]int{}
+	return bill
+}
