@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type ElectionResult struct {
 	// Name of the candidate
 	Name string
@@ -32,4 +34,9 @@ func NewElectionResult(candidateName string, votes int) *ElectionResult {
 		Name:  candidateName,
 		Votes: votes,
 	}
+}
+
+// DisplayResult creates a message with the result to be displayed.
+func DisplayResult(result *ElectionResult) string {
+	return fmt.Sprintf("%s (%d)", result.Name, result.Votes)
 }
