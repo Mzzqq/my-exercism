@@ -40,3 +40,8 @@ func NewElectionResult(candidateName string, votes int) *ElectionResult {
 func DisplayResult(result *ElectionResult) string {
 	return fmt.Sprintf("%s (%d)", result.Name, result.Votes)
 }
+
+// DecrementVotesOfCandidate decrements by one the vote count of a candidate in a map.
+func DecrementVotesOfCandidate(results map[string]int, candidate string) {
+	results[candidate] -= 1
+}
