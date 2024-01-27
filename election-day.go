@@ -1,5 +1,12 @@
 package main
 
+type ElectionResult struct {
+	// Name of the candidate
+	Name string
+	// Votes of votes the candidate had
+	Votes int
+}
+
 // NewVoteCounter returns a new vote counter with
 // a given number of initial votes.
 func NewVoteCounter(initialVotes int) *int {
