@@ -13,3 +13,8 @@ func VoteCount(counter *int) int {
 	}
 	return 0
 }
+
+// IncrementVoteCount increments the value in a vote counter.
+func IncrementVoteCount(counter *int, increment int) {
+	*counter += increment
+}
