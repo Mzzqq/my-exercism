@@ -49,3 +49,10 @@ func Description(date string) string {
 
 	return fmt.Sprintf("You have an appointment on %s", t.Format("Monday, January 2, 2006, at 15:04."))
 }
+
+// AnniversaryDate returns a Time with this year's anniversary.
+func AnniversaryDate() time.Time {
+	year := time.Now().Year()
+	anniv := time.Date(year, time.September, 15, 0, 0, 0, 0, time.UTC)
+	return anniv
+}
