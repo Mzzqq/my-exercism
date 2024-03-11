@@ -21,3 +21,17 @@ func HasPassed(date string) bool {
 	}
 	return t.Before(time.Now())
 }
+
+// IsAfternoonAppointment returns whether a time is in the afternoon.
+// "Thursday, July 25, 2019 13:45:00"
+func IsAfternoonAppointment(date string) bool {
+	t, err := time.Parse("Monday, January 2, 2006 15:04:05", date)
+	if err != nil {
+		panic(err)
+	}
+
+	if t.Hour() >= 12 && t.Hour() < 18 {
+		return true
+	}
+	return false
+}
