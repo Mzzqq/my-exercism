@@ -17,3 +17,17 @@ func CountInFile(cb Chessboard, file string) int {
 	}
 	return count
 }
+
+// CountInRank returns how many squares are occupied in the chessboard,
+// within the given rank.
+func CountInRank(cb Chessboard, rank int) int {
+	count := 0
+	if rank >= 1 && rank <= 8 {
+		for _, v := range cb {
+			if v[rank-1] {
+				count += 1
+			}
+		}
+	}
+	return count
+}
