@@ -1,6 +1,9 @@
 package main
 
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 // Schedule returns a time.Time from a string containing a date.
 // "7/25/2019 13:45:00"
@@ -34,4 +37,15 @@ func IsAfternoonAppointment(date string) bool {
 		return true
 	}
 	return false
+}
+
+// Description returns a formatted string of the appointment time.
+// "7/25/2019 13:45:00"
+func Description(date string) string {
+	t, err := time.Parse("1/2/2006 15:04:05", date)
+	if err != nil {
+		panic(err)
+	}
+
+	return fmt.Sprintf("You have an appointment on %s", t.Format("Monday, January 2, 2006, at 15:04."))
 }
