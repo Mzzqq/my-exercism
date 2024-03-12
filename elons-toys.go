@@ -14,3 +14,8 @@ func (c *Car) Drive() {
 func (c *Car) DisplayDistance() string {
 	return fmt.Sprintf("Driven %d meters", c.distance)
 }
+
+// TODO: define the 'DisplayBattery() string' method
+func (c *Car) DisplayBattery() string {
+	return fmt.Sprintf("Battery at %d%%", c.battery)
+}
