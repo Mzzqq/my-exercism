@@ -8,3 +8,12 @@ type Car struct {
 	battery  int
 	distance int
 }
+
+// NewCar creates a new car with given specifications.
+func NewCar(speed, batteryDrain int) *Car {
+	return &Car{
+		speed:        speed,
+		batteryDrain: batteryDrain,
+		battery:      100,
+	}
+}
